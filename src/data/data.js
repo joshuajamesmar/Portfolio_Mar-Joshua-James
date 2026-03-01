@@ -102,25 +102,18 @@ export const projects = [
 
 export const experience = [
   {
-    role: "Senior Frontend Engineer",
-    company: "Vercel",
-    period: "2022 — Present",
+    role: "Internship",
+    company: "La Verdad Christian College",
+    period: "March 2024 — September 2024",
     description:
-      "Lead frontend development for the dashboard experience. Own the deployment workflow UI used by 400k+ developers daily.",
+      "On the Job Training as a Web Developer and Maintenance, Developed and maintained a Digital Library System, As well as Record keeping and encoding.",
   },
   {
-    role: "Frontend Engineer",
-    company: "Linear",
+    role: "Client Support Specialist - Data Entry",
+    company: "Global Strategic Business Process Solutions",
     period: "2020 — 2022",
     description:
-      "Built core UI features for the issue tracker. Contributed to performance work that reduced Time-to-Interactive by 40%.",
-  },
-  {
-    role: "UI Engineer",
-    company: "Freelance",
-    period: "2018 — 2020",
-    description:
-      "Delivered design systems and frontend architecture for 15+ startups across fintech, healthtech, and consumer apps.",
+      "Manage foreclosure accounts monthly, maintaining 98% billing accuracy, reducing processing turnaround time by 50%, and ensuring 99% on-time completion through proactive file monitoring and organized documentation.",
   },
 ];
 
