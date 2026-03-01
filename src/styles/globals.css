@@ -1,0 +1,42 @@
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom font imports */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@300;400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --blue: #4f8ef7;
+  --purple: #a78bfa;
+  --pink: #f472b6;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Custom scrollbar — dark mode */
+.dark ::-webkit-scrollbar { width: 4px; }
+.dark ::-webkit-scrollbar-track { background: #080c14; }
+.dark ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+.dark ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* Custom scrollbar — light mode */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #f5f4f0; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.2); }
+
+/* Selection */
+.dark ::selection { background: rgba(79,142,247,0.25); color: #fff; }
+::selection { background: rgba(79,142,247,0.2); color: #1a1a2e; }

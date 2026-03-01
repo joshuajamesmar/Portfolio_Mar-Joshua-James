@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Joshua Mar — Frontend Developer</title>
+    <meta name="description" content="Aspiring frontend developer from the Philippines building digital experiences with React, CSS and modern web tools." />
+    <meta name="author" content="Joshua Mar" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Joshua Mar — Frontend Developer" />
+    <meta property="og:description" content="CSS-DE | Aspiring Frontend Developer based in Metro Manila." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!--
+      Tailwind CSS via CDN — no npm install required.
+      darkMode: 'class' is CRITICAL — it makes dark: variants work by
+      checking for the 'dark' class on <html>, which App.jsx toggles.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              accent: '#4f8ef7',
+              purple: '#a78bfa',
+            },
+            fontFamily: {
+              sans: ['DM Sans', 'system-ui', 'sans-serif'],
+              display: ['Syne', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@300;400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
