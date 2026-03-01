@@ -5,7 +5,7 @@
 export const personal = {
   name: "Joshua Mar",
   tagline: "CSS - DE | Aspiring Frontend Developer",
-  bio: "I build digital experiences that live at the intersection of design and engineering. Five years of turning complex problems into elegant, performant interfaces that people actually enjoy using.",
+  bio: "I create interactive digital experiences that blend design and development. I bring a passion for crafting elegant, user-friendly interfaces that are both functional and enjoyable to use, translating ideas into code with precision and creativity.",
   location: "Mandaluyong City, Metro Manila, Philippines",
   availability: "Open to opportunities",
   email: "joshuajames.d.mar@gmail.com",

@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { personal } from "../../data/data";
 
-// Word-by-word reveal animation
 function SplitReveal({ text, className, delay = 0 }) {
   const words = text.split(" ");
   return (
@@ -26,11 +25,9 @@ function SplitReveal({ text, className, delay = 0 }) {
   );
 }
 
-// Ambient glowing orbs — theme-aware
 function AmbientOrbs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Blue orb — top right */}
       <motion.div
         className="absolute w-[600px] h-[600px] rounded-full"
         style={{
@@ -42,7 +39,6 @@ function AmbientOrbs() {
         animate={{ scale: [1, 1.1, 1], opacity: [0.6, 1, 0.6] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
-      {/* Purple orb — bottom left */}
       <motion.div
         className="absolute w-[400px] h-[400px] rounded-full"
         style={{
@@ -54,7 +50,6 @@ function AmbientOrbs() {
         animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.8, 0.4] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
-      {/* Subtle dot grid */}
       <div
         className="absolute inset-0 opacity-[0.035] dark:opacity-[0.025]"
         style={{
@@ -71,7 +66,6 @@ export default function Hero() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
 
-  // Gentle upward float only — NO opacity fade so Hero stays fully visible
   const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
@@ -81,16 +75,10 @@ export default function Hero() {
       aria-label="Hero section"
     >
       <AmbientOrbs />
-
-      {/*
-        Hero content — floats gently upward on scroll but NEVER fades out.
-        Removed the 'opacity' transform that was causing the disappearing issue.
-      */}
       <motion.div
         className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-20"
         style={{ y }}
       >
-        {/* Status badge */}
         <motion.div
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-sm mb-10"
           initial={{ opacity: 0, y: 20 }}
@@ -106,8 +94,6 @@ export default function Hero() {
             {personal.location}
           </span>
         </motion.div>
-
-        {/* Main headline */}
         <h1 className="text-[clamp(2.8rem,7vw,6rem)] font-extralight leading-[1.05] tracking-tight mb-6 overflow-hidden">
           <div className="overflow-hidden">
             <SplitReveal
@@ -125,7 +111,6 @@ export default function Hero() {
           </div>
         </h1>
 
-        {/* Bio */}
         <motion.p
           className="max-w-xl text-base text-black/50 dark:text-white/45 leading-relaxed mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -135,7 +120,6 @@ export default function Hero() {
           {personal.bio}
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
           className="flex flex-wrap items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
@@ -192,7 +176,6 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator — stays fixed at bottom, always visible */}
       <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
         initial={{ opacity: 0 }}
