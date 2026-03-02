@@ -43,9 +43,7 @@ export default function About() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              When I'm not in an editor, I'm likely reading about type design, experimenting
-              with generative art, or overanalyzing why some UIs feel effortless while others don't.
-              Good coffee is non-negotiable.
+              When I’m not in an editor, I’m likely exploring type design, experimenting with generative art, or analyzing why some UIs feel effortless while others don’t.
             </motion.p>
 
             <motion.div
@@ -55,8 +53,8 @@ export default function About() {
               transition={{ delay: 0.5 }}
             >
               {[
-                { value: "2+", label: "Years exp" },
-                { value: "10+", label: "Projects built" },
+                { value: "4", label: "Academic Years exp" },
+                { value: "8", label: "Projects built" },
                 { value: "100%", label: "Passion" },
               ].map((stat) => (
                 <div

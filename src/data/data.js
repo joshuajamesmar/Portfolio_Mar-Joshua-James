@@ -40,16 +40,15 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Beacon Analytics",
-    category: "SaaS Dashboard",
+    title: "LVTV: Livestreaming Website",
+    category: "Livestreaming Platform",
     description:
-      "Real-time analytics platform with customizable dashboards. Built for scale — handles 2M+ events/day with sub-200ms query response times.",
+    "Live streaming platform built for the Bachelor of Arts in Broadcasting program at La Verdad Christian College - Apalit. Designed to reduce streaming interruptions and centralize cloud-based video archiving for students and faculty.",
     longDescription:
-      "Beacon is a full-stack SaaS analytics platform I designed and built end-to-end. Features include real-time event streaming, custom dashboard builder with drag-and-drop widgets, multi-tenant architecture, and a React-based query editor. The UI was designed with a focus on data density without cognitive overload.",
-    tech: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    liveUrl: "https://beacon.example.com",
-    githubUrl: "https://github.com/alexmercer/beacon",
+    "LVTV is a full-stack live streaming platform developed as our Bachelor of Science in Information Systems capstone project for SY 2023–2024. The system was created to enhance the digital experience of BAB students at La Verdad Christian College - Apalit by addressing common issues such as live stream interruptions and inefficient video storage management. The platform optimizes live streaming performance and provides a centralized system for manually archiving recorded broadcasts into designated cloud storage. Development followed an agile methodology to ensure continuous feedback, flexibility, and client-focused iteration throughout the project lifecycle. To evaluate system effectiveness, we applied the Technology Acceptance Model (TAM) to measure perceived usefulness and ease of use, along with Website Usability Metrics (WUM) to assess overall usability and user experience. The final product improved user engagement, streamlined video management, and delivered a more reliable and user-friendly digital environment for broadcasting students.",
+    tech: ["Vite+React", "TypeScript", "TailwindCSS", "Laravel", "Node.js", "Owncast"],
+    image: "/src/assets/lvtv.png",
+    githubUrl: "https://github.com/joshuajamesmar/LVTV",
     featured: true,
     color: "#3b82f6",
   },
