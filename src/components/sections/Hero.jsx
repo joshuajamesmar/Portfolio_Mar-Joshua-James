@@ -141,6 +141,7 @@ export default function Hero() {
           </a>
           <a
             href={personal.resumeUrl}
+            download="Joshua_Mar_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white text-sm font-medium transition-all duration-200 hover:-translate-y-0.5"

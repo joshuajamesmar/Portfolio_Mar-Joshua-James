@@ -3,6 +3,9 @@
 // ================
 import project1 from "/assets/images/lvtv.png";
 import project2 from "/assets/images/lavaroom.png";
+import project3 from "/assets/images/biblicite.png";
+import project4 from "/assets/images/realtor.png";
+import resume from "/assets/files/Joshua_Mar_Resume.pdf";
 
 export const personal = {
   name: "Joshua Mar",
@@ -11,7 +14,9 @@ export const personal = {
   location: "Mandaluyong City, Metro Manila, Philippines",
   availability: "Open to opportunities",
   email: "joshuajames.d.mar@gmail.com",
-  resumeUrl: "/resume.pdf",
+  phone: `+63 921-295-3760  
+  +63 917-129-0373`,
+  resumeUrl: resume,
   social: {
     github: "https://github.com/joshuajamesmar",
     linkedin: "https://www.linkedin.com/in/joshua-james-mar/",
@@ -30,11 +35,20 @@ export const skills = [
     ],
   },
   {
+    category: "Backend",
+    items: [
+      { name: "Laravel", level: 55 },
+      { name: "Node.js", level: 55 },
+      { name: "REST APIs", level: 60 },
+      { name: "MySQL", level: 50 },
+    ],
+  },
+  {
     category: "Tools",
     items: [
       { name: "Figma", level: 75 },
       { name: "Git / GitHub", level: 75 },
-      { name: "Netlify", level: 75 },
+      { name: "Netlify / Vercel", level: 75 },
     ],
   },
 ];
@@ -77,32 +91,44 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Orange",
-    category: "Web App",
+    title: "Biblicite",
+    category: "Mobile Application",
     description:
-      "MHMM",
+    "Mobile digital Bible application featuring offline reading, verse search, note-taking, and daily scripture highlights designed to improve accessibility and usability for modern users.",
     longDescription:
-      "This orange is gineminasaurus.",
-    tech: ["Orange", "Huge"],
-    image: "https://static.scientificamerican.com/sciam/cache/file/68A02F93-F3F9-40C1-8A157B9F77108A85_source.jpg?w=900",
-    githubUrl: "https://github.com/joshuajamesmar",
+    `Digibible is a mobile digital Bible application developed to make scripture more accessible in today’s modern, technology-driven environment. The platform provides users with a fully digitized version of the Bible that can be accessed online or offline through smartphones, supporting both the King James Version (KJV) and Ang Dating Biblia 1905 translations.
+
+    The application was designed to simplify Bible navigation by allowing users to quickly browse books, chapters, and verses through an intuitive interface. Key features include verse search functionality, a Verse of the Day dashboard, customizable themes, and an integrated note-taking system that enables users to record reflections and lessons directly within the app.
+
+    Digibible also integrates useful resources such as official church links and media channels to support religious learning and engagement beyond scripture reading. Users can highlight verses, organize notes, and personalize the application’s appearance to enhance their reading experience.
+
+    Built with usability and efficiency in mind, the application prioritizes simplicity, low data consumption, and offline accessibility. No user registration is required, ensuring privacy while allowing immediate access to all features. The result is a lightweight, user-friendly digital companion designed to support Bible study, church activities, and daily spiritual learning.`,
+    tech: ["Expo", "Expo CLI", "React Native", "JavaScript"],
+    image: project3,
+    githubUrl: "https://github.com/joshuajamesmar/Bible-App",
     featured: false,
-    color: "#10b981",
+    color: "#7a6c03",
   },
   {
     id: 4,
-    title: "Dinosaur",
-    category: "Rawhr",
+    title: "Modern Realtor Landing Page",
+    category: "Website Redesign",
     description:
-      "dinonor",
+    "Modernized realtor website homepage redesign focused on improving visual hierarchy, usability, and overall user experience while maintaining existing content and branding.",
     longDescription:
-      "dinosor rohr",
-    tech: ["Prehistoric", "Extinct"],
-    image: "https://www.metro.pr/resizer/v2/5I2HTYGYLBEADCHMQK4FOVDH5M.jpeg?smart=true&auth=26952bb26c2fc08ff408a4d47b922e3022e5263ff93ac20e17858be4973f7a11&width=1600&height=898",
-    liveUrl: "https://pulse.example.com",
-    githubUrl: "https://github.com/alexmercer/pulse",
+    `This project was completed as part of a Web Builder technical assessment focused on redesigning a realtor website homepage. The objective was to revamp the existing design while preserving all original content and assets, transforming the page into a cleaner, more modern, and user-friendly experience.
+
+    The redesign emphasized simplicity and elegance by improving layout structure, typography, spacing, and visual hierarchy. Rather than replicating the original page, the goal was to enhance usability and create a more engaging first impression for potential property clients.
+
+    Using HTML, CSS, and JavaScript, the homepage was rebuilt as a single-page website with responsive design principles to ensure accessibility across different screen sizes. Additional refinements included improved navigation flow, clearer call-to-action sections, and optimized content organization to better guide users through property information.
+
+    This project demonstrates my ability to interpret client requirements, apply creative problem-solving, and deliver a polished interface under real-world assignment constraints while balancing aesthetics and functionality.`,
+    tech: ["HTML", "CSS", "JavaScript", "TailwindCSS", "Google Maps API", "REST API Integration"],
+    image: project4,
+    liveUrl: "https://dynamic-gaufre-9beb05.netlify.app/",
+    githubUrl: "https://github.com/joshuajamesmar/pft-web-builder-assignment",
     featured: false,
-    color: "#f59e0b",
+    color: "#f9d375",
   },
 ];
 

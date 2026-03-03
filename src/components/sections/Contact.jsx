@@ -41,12 +41,36 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const errs = validate();
-    if (Object.keys(errs).length) { setErrors(errs); return; }
+    const newErrors = {};
+    if (!form.name.trim()) newErrors.name = "Name is required";
+    if (!form.email.trim()) newErrors.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(form.email)) newErrors.email = "Enter a valid email";
+    if (!form.message.trim()) newErrors.message = "Message is required";
+    if (Object.keys(newErrors).length) return setErrors(newErrors);
+
     setErrors({});
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus("sent");
+
+    try {
+      const res = await fetch("https://formspree.io/f/mjgeqzjl", {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+      if (res.ok) {
+        setStatus("sent");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("idle");
+        alert("Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("idle");
+      alert("Network error. Please try again.");
+    }
   };
 
   return (
@@ -95,6 +119,14 @@ export default function Contact() {
                 </svg>
               </div>
               <span className="text-sm">{personal.email}</span>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/5 flex items-center justify-center group-hover:border-black/20 dark:group-hover:border-white/20 transition-colors">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+                  </svg>
+                </div>
+                <span style={{ whiteSpace: "pre-line" }} className="text-sm">{personal.phone}</span>
+              </div>
             </motion.a>
           </div>
 
