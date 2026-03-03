@@ -2,6 +2,7 @@
 // PORTFOLIO DATA 
 // ================
 import project1 from "/assets/images/lvtv.png";
+import project2 from "/assets/images/lavaroom.png";
 
 export const personal = {
   name: "Joshua Mar",
@@ -45,54 +46,59 @@ export const projects = [
     category: "Livestreaming Platform",
     description:
     "Live streaming platform built for the Bachelor of Arts in Broadcasting program at La Verdad Christian College - Apalit. Designed to reduce streaming interruptions and centralize cloud-based video archiving for students and faculty.",
-    longDescription:
-    "LVTV is a full-stack live streaming platform developed as our Bachelor of Science in Information Systems capstone project for SY 2023–2024. The system was created to enhance the digital experience of BAB students at La Verdad Christian College - Apalit by addressing common issues such as live stream interruptions and inefficient video storage management. The platform optimizes live streaming performance and provides a centralized system for manually archiving recorded broadcasts into designated cloud storage. Development followed an agile methodology to ensure continuous feedback, flexibility, and client-focused iteration throughout the project lifecycle. To evaluate system effectiveness, we applied the Technology Acceptance Model (TAM) to measure perceived usefulness and ease of use, along with Website Usability Metrics (WUM) to assess overall usability and user experience. The final product improved user engagement, streamlined video management, and delivered a more reliable and user-friendly digital environment for broadcasting students.",
+    longDescription: 
+    `LVTV is a full-stack live streaming platform developed as our Bachelor of Science in Information Systems capstone project for SY 2023–2024. The system was created to enhance the digital experience of BAB students at La Verdad Christian College - Apalit by addressing common issues such as live stream interruptions and inefficient video storage management. The platform optimizes live streaming performance and provides a centralized system for manually archiving recorded broadcasts into designated cloud storage.
+
+    Development followed an agile methodology to ensure continuous feedback, flexibility, and client-focused iteration throughout the project lifecycle. To evaluate system effectiveness, we applied the Technology Acceptance Model (TAM) to measure perceived usefulness and ease of use, along with Website Usability Metrics (WUM) to assess overall usability and user experience. The final product improved user engagement, streamlined video management, and delivered a more reliable and user-friendly digital environment for broadcasting students.`,
     tech: ["Vite+React", "TypeScript", "TailwindCSS", "Laravel", "Node.js", "Owncast"],
     image: project1,
     githubUrl: "https://github.com/joshuajamesmar/LVTV",
     featured: true,
-    color: "#3b82f6",
+    color: "#002b71",
   },
   {
     id: 2,
-    title: "Forma Design System",
-    category: "Design System",
+    title: "LavaRoom",
+    category: "Hot Desk Booking Website",
     description:
-      "Comprehensive component library with 60+ components, full dark mode, and a11y compliance. Used by 3 internal products.",
+    "Workspace management system designed for freelance environments, enabling efficient hot desk scheduling and optimized space utilization while reducing client and workstation conflicts.",
+
     longDescription:
-      "Forma is a design system I built from scratch after noticing inconsistencies across our product suite. It includes a Figma library, a React component library with Storybook documentation, automated visual regression testing via Chromatic, and a documentation site.",
-    tech: ["React", "Storybook", "Radix UI", "CSS Modules"],
-    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
-    liveUrl: "https://forma.example.com",
-    githubUrl: "https://github.com/alexmercer/forma",
+    `Lavaroom is an organizational workspace management system developed to support freelancers operating within shared work environments. The platform enables structured scheduling of employees across different time slots, allowing users to reserve and combine assigned workstations efficiently within a single venue.
+
+    The system applies a hot desk approach to minimize unused workstations, maximize space efficiency, and reduce scheduling conflicts between freelancers and clients. By streamlining workspace allocation, Lavaroom helps create a more organized and productive environment.
+
+    Through improved scheduling and flexible workspace usage, freelancers gain better opportunities to collaborate and communicate with clients, while clients benefit from a more reliable, well-managed, and productivity-focused working space.`,
+    tech: ["HTMLS", "CSS", "JavaScript", "PHP"],
+    image: project2,
+    githubUrl: "https://github.com/joshuajamesmar/Hot-Desking",
     featured: true,
-    color: "#a855f7",
+    color: "#de0303",
   },
   {
     id: 3,
-    title: "Meridian Maps",
+    title: "Orange",
     category: "Web App",
     description:
-      "Interactive geospatial visualization tool for urban planners. Processes city-scale datasets with WebGL-accelerated rendering.",
+      "MHMM",
     longDescription:
-      "A geospatial data visualization tool built for a city planning consultancy. Features WebGL rendering via deck.gl for smooth 60fps animations on datasets with millions of points, custom map styles, and an AI-assisted layer recommendation system.",
-    tech: ["React", "deck.gl", "Mapbox GL", "Python", "FastAPI"],
-    image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
-    liveUrl: "https://meridian.example.com",
-    githubUrl: "https://github.com/alexmercer/meridian",
+      "This orange is gineminasaurus.",
+    tech: ["Orange", "Huge"],
+    image: "https://static.scientificamerican.com/sciam/cache/file/68A02F93-F3F9-40C1-8A157B9F77108A85_source.jpg?w=900",
+    githubUrl: "https://github.com/joshuajamesmar",
     featured: false,
     color: "#10b981",
   },
   {
     id: 4,
-    title: "Pulse Streaming",
-    category: "Media Platform",
+    title: "Dinosaur",
+    category: "Rawhr",
     description:
-      "High-performance video streaming interface with adaptive bitrate, custom player controls, and creator analytics dashboard.",
+      "dinonor",
     longDescription:
-      "A custom video streaming platform built for independent creators. Features include adaptive bitrate streaming via HLS.js, a fully custom React video player, creator analytics, comment threading, and subscription management.",
-    tech: ["Next.js", "HLS.js", "Stripe", "Prisma", "Vercel"],
-    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80",
+      "dinosor rohr",
+    tech: ["Prehistoric", "Extinct"],
+    image: "https://www.metro.pr/resizer/v2/5I2HTYGYLBEADCHMQK4FOVDH5M.jpeg?smart=true&auth=26952bb26c2fc08ff408a4d47b922e3022e5263ff93ac20e17858be4973f7a11&width=1600&height=898",
     liveUrl: "https://pulse.example.com",
     githubUrl: "https://github.com/alexmercer/pulse",
     featured: false,

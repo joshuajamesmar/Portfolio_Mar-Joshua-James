@@ -47,7 +47,7 @@ function ProjectCard({ project, onClick }) {
         <AnimatePresence>
           {hovered && (
             <motion.div
-              className="absolute top-4 right-4 flex flex-wrap gap-1.5 justify-end"
+              className="relative w-full max-w-2xl max-h-[90vh] bg-white dark:bg-[#0d1220] border border-black/10 dark:border-white/10 rounded-2xl overflow-y-auto shadow-2xl"
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
@@ -112,7 +112,7 @@ function ProjectModal({ project, onClose }) {
         aria-modal="true"
         aria-label={project.title}
       >
-        <div className="relative h-56 overflow-hidden">
+        <div className="relative h-82 overflow-hidden sticky top-0">
           <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#0d1220] via-transparent to-transparent" />
           <button
@@ -124,10 +124,10 @@ function ProjectModal({ project, onClose }) {
           </button>
         </div>
 
-        <div className="p-8">
+        <div className="p-8 overflow-y-auto max-h-[50vh]">
           <span className="text-xs uppercase tracking-widest text-black/30 dark:text-white/30">{project.category}</span>
           <h2 className="text-2xl font-medium text-black dark:text-white mt-1 mb-4">{project.title}</h2>
-          <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed mb-6">{project.longDescription}</p>
+          <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed mb-6 whitespace-pre-line">{project.longDescription}</p>
 
           <div className="flex flex-wrap gap-2 mb-8">
             {project.tech.map((t) => (
