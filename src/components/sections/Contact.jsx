@@ -102,7 +102,7 @@ export default function Contact() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Have a project in mind or want to collaborate? Drop me a message and I'll get back to you.
+              Have a project in mind, want to collaborate, or looking for a dedicated developer to join your team? Drop me a message and I’ll get back to you.
             </motion.p>
 
             <motion.a
