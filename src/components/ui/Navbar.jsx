@@ -12,10 +12,7 @@ export default function Navbar({ isDark, toggleTheme }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const initials = personal.name
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
+  const initials = personal.name.split(" ").map((n) => n[0]).join("");
 
   return (
     <>
