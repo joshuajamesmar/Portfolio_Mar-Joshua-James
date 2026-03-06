@@ -119,6 +119,14 @@ export default function Contact() {
                 </svg>
               </div>
               <span className="text-sm">{personal.email}</span>
+            </motion.a>
+            <motion.a
+              href={`mailto:${personal.email}`}
+              className="group flex items-center gap-3 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors mt-4"
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.35 }}
+            >
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/5 flex items-center justify-center group-hover:border-black/20 dark:group-hover:border-white/20 transition-colors">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
