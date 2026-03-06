@@ -66,7 +66,7 @@ export default function Hero() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 60]);
 
   return (
     <section
